@@ -17,7 +17,7 @@ The flow is the following:
 
     sudo -i
     rpm-ostree install kmod....rpm
-    bash blacklist-kernelargs.sh
+    rpm-ostree kargs --append rd.driver.blacklist=qedf --append rd.driver.blacklist=qed --append rd.driver.blacklist=qedr --append rd.driver.blacklist=qedi --append rd.driver.blacklist=qede
     
 > the kernel boot blacklist args are needed to ensure the old drivers are not preloaded with initramfs
 
