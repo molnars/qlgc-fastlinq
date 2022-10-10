@@ -18,6 +18,8 @@ The flow is the following:
     sudo -i
     rpm-ostree install kmod....rpm
     bash blacklist-kernelargs.sh
+    
+> the kernel boot blacklist args are needed to ensure the old drivers are not preloaded with initramfs
 
 > if the node already has FC volumes attached, you may need to blacklist the FC driver from OS boot as well to avoid the blocking of boot by driver errors.  This is achieved by deploying the optional /etc/modprobe.d/  files.
 > also make sure that you don't loose network connectivity to OS by **not** including the qede network driver in the blacklist.
